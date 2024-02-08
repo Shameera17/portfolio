@@ -40,13 +40,20 @@ Variables
   --clr-white: #fff;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
-  --transition: all 0.3s linear;
+  --transition: all 0.2s linear;
   --spacing: 0.2rem;
   --radius: 0.25rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 700px;
+
+  /* portfolio colors */
+  --background: hsla(249, 100%, 75%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --beige: hsla(24, 100%, 87%, 1);
+  --text1: hsla(0, 0%, 12%, 1);
+  --text2: hsla(225, 8%, 10%, 1);
 }
 /*
 =============== 
@@ -217,7 +224,7 @@ Navbar
   display: flex;
   align-items: center;
   z-index: 200;
-  background: var(--clr-white);
+  background: var(--background);
 }
 .nav-center {
   width: 90vw;
@@ -236,12 +243,12 @@ Navbar
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
-  color: var(--clr-primary-5);
+  color: var(--white);
   cursor: pointer;
   transition: var(--transition);
 }
 .toggle-btn:hover {
-  color: var(--clr-primary-2);
+  color: var(--beige);
 }
 .nav-links {
   display: none;
@@ -256,19 +263,48 @@ Navbar
   }
   .nav-links li {
     margin-right: 2rem;
+    display: flex;
+    align-items: center;
   }
   .nav-links a {
     text-transform: capitalize;
-    color: var(--clr-grey-1);
+    color: var(--white);
     font-weight: bold;
     letter-spacing: var(--spacing);
     transition: var(--transition);
     padding: 0.5rem 0;
+
+    font-family: "Manrope";
+    font-style: normal;
+    line-height: 27px;
+
+    /* Common/White */
+    color: var(--white);
+
+    /* Inside auto layout */
+    display: block;
+    order: 0;
+    flex-grow: 0;
   }
   .nav-links a:hover {
-    color: var(--clr-primary-5);
-    box-shadow: 0px 2px var(--clr-primary-5);
+    color: var(--beige);
   }
+  .nav-links li:not(:last-child) a:hover {
+    color: var(--beige);
+    box-shadow: 0px 2px var(--beige);
+  }
+
+  .nav-links li:last-child a {
+    background-color: hsla(0, 0%, 100%, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 132px;
+    height: 57px;
+    border-radius: 10px;
+    gap: 10px;
+  }
+
   .nav-center {
     display: grid;
     grid-template-columns: auto 1fr;

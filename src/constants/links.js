@@ -30,7 +30,7 @@ const data = [
 
 const tempLinks = data.map(link => {
   return (
-    <li key={link.id}>
+    <li key={link.id} className={link.text + link.id}>
       <Link to={link.url}>{link.text}</Link>
     </li>
   )
