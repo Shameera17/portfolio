@@ -18,8 +18,8 @@ const data = [
   },
   {
     id: 4,
-    text: "blog",
-    url: "/blog/",
+    text: "hobbies",
+    url: "/hobbies/",
   },
   {
     id: 5,

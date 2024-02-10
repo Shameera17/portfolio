@@ -6,6 +6,21 @@ import {
   FaBehanceSquare,
   FaTwitterSquare,
 } from "react-icons/fa"
+import Image from "gatsby-image"
+
+import { graphql, useStaticQuery } from "gatsby"
+
+const query = graphql`
+  {
+    file(relativePath: { eq: "Line.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 const data = [
   {
@@ -45,7 +60,15 @@ const links = data.map(link => {
 })
 
 export default ({ styleClass }) => {
+  const {
+    file: {
+      childImageSharp: { fluid },
+    },
+  } = useStaticQuery(query)
   return (
-    <ul className={`social-links ${styleClass ? styleClass : ""}`}>{links}</ul>
+    <ul className={`social-links ${styleClass ? styleClass : ""}`}>
+      {links}
+      <Image className={"social-line"} fluid={fluid} />
+    </ul>
   )
 }

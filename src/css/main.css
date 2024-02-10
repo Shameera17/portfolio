@@ -4,13 +4,12 @@ Fonts
 ===============
 */
 /* @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap"); */
-
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 /*
 =============== 
 Variables
 ===============
 */
-
 :root {
   /* dark shades of primary color*/
   /* --clr-primary-1: hsl(43, 86%, 17%); */
@@ -177,14 +176,7 @@ p {
   }
 }
 /* added during recording */
-.underline {
-  width: 5rem;
-  height: 0.25rem;
-  margin-bottom: 1.25rem;
-  background: var(--clr-primary-5);
-  margin-left: auto;
-  margin-right: auto;
-}
+
 .section-title {
   margin-bottom: 4rem;
   text-align: center;
@@ -193,13 +185,19 @@ p {
   background: var(--clr-grey-10);
 }
 /* page links */
-
+.social-line {
+  height: 100%;
+  width: 5px;
+  display: flex;
+}
 /* social links */
 .social-links {
-  margin-top: 2rem;
-  width: 15rem;
+  margin-top: 80px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  align-items: center;
 }
 .social-link {
   font-size: 1.75rem;
@@ -207,7 +205,7 @@ p {
   transition: var(--transition);
 }
 .social-link:hover {
-  color: var(--clr-primary-5);
+  color: var(--beige);
 }
 /*
 =============== 
@@ -441,41 +439,109 @@ Sidebar Animation
 Hero
 ===============
 */
-/* underline added to globals */
+
 .hero {
   margin-top: -5rem;
-  padding-top: 5rem;
-  height: 100vh;
-  background: var(--clr-primary-10);
+  /* padding-top: 5rem; */
+  /* height: 710px; */
   position: relative;
 }
 
-.hero-center {
-  height: 100%;
-  display: grid;
-  align-items: center;
+.hero-text1 {
+  font-family: Manrope;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--beige);
 }
+.hero-text2 {
+  /* Shameera Carrim. */
 
-.hero .underline {
-  margin-bottom: 0.5rem;
-  margin-left: 0;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 109px;
+
+  /* Common/White */
+  color: #ffffff;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.hero-text3 {
+  width: 75%;
+  /* Sub Heading */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 10px;
+
+  width: 705px;
+  height: 94px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+  /* Sub Heading */
+
+  width: 685px;
+  height: 74px;
+
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 175%;
+  /* or 37px */
+  letter-spacing: 0.05em;
+
+  /* Common/White */
+  color: #ffffff;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 .hero-info {
-  background: var(--clr-primary-10);
+  padding-top: 100px;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  column-gap: 86px;
+  margin-left: 61px;
 }
 .hero-img {
   display: none;
+  /* height: 710px; */
 }
 .hero-info h4 {
   color: var(--clr-grey-5);
 }
 .hero-icons {
   justify-items: flex-start;
+  align-items: center;
 }
 .hero .btn {
   margin-top: 1.25rem;
 }
 
+@media screen and (max-width: 992px) {
+  .hero-text3,
+  .hero-text2 {
+    color: black;
+  }
+}
 @media screen and (min-width: 992px) {
   .hero::before {
     content: "";
@@ -497,6 +563,13 @@ Hero
     grid-row: 1/1;
     grid-column: 1 / span 8;
   }
+
+  .code-icon {
+    width: 377px;
+    height: 335px;
+    opacity: 0.1px;
+  }
+
   .hero-img {
     display: block;
     grid-row: 1/1;
