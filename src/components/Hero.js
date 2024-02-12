@@ -24,24 +24,26 @@ const Hero = () => {
   } = useStaticQuery(query)
   return (
     <header className="hero">
-      <div
-      // className="section-center hero-center"
-      >
+      <div>
         <article className="hero-info">
           <div>
             <SocialLinks />
           </div>
           <div>
             <p className="hero-text1">Hello! My Name is</p>
-            <h1 className="hero-text2">Shameera Carrim</h1>
+            <p className="hero-text2">
+              <span className="t1">Shameera</span>
+              <span className="t2"> Carrim.</span>
+            </p>
             <p className="hero-text3">
               A passionate programming freelancer with top-notch experience in
               web app and desktop application development.
             </p>
+            <Link to="/projects" className="btn">
+              Browse projects
+            </Link>
           </div>
-          <div>
-            <CodeImageitem styleClass={"code-icon"} />
-          </div>
+          <div>{/* <CodeImageitem styleClass={"code-icon"} /> */}</div>
         </article>
         <Image fluid={fluid} className={"hero-img"} />
       </div>
