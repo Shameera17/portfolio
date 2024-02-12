@@ -43,7 +43,6 @@ const Hero = () => {
               Browse projects
             </Link>
           </div>
-          <div>{/* <CodeImageitem styleClass={"code-icon"} /> */}</div>
         </article>
         <Image fluid={fluid} className={"hero-img"} />
       </div>
