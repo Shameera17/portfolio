@@ -1,10 +1,5 @@
 import React from "react"
-import {
-  FaFacebookSquare,
-  FaLinkedin,
-  FaTwitterSquare,
-  FaGithub,
-} from "react-icons/fa"
+import { FaLinkedin, FaGithub } from "react-icons/fa"
 import { FaUnsplash } from "react-icons/fa6"
 import Image from "gatsby-image"
 
@@ -33,12 +28,12 @@ const data = [
     icon: <FaLinkedin className="social-icon"></FaLinkedin>,
     url: "https://www.linkedin.com/in/shameeracarrim17/",
   },
-  {
-    id: 3,
+  // {
+  //   id: 3,
 
-    icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
-    url: "https://web.facebook.com/shameera28",
-  },
+  //   icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
+  //   url: "https://web.facebook.com/shameera28",
+  // },
   {
     id: 4,
     icon: <FaUnsplash className="social-icon"></FaUnsplash>,

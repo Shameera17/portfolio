@@ -442,9 +442,7 @@ Hero
 
 .hero {
   margin-top: -5rem;
-  /* padding-top: 5rem; */
-  /* height: 710px; */
-  position: relative;
+  height: 100vh;
 }
 
 .hero-text1 {
@@ -457,41 +455,27 @@ Hero
   color: var(--beige);
 }
 .hero-text2 .t1 {
-  /* Shameera Carrim. */
-
   width: 675px;
   height: 109px;
-
   font-family: "Manrope";
   font-style: normal;
   font-weight: 800;
   font-size: 80px;
   line-height: 109px;
-
-  /* Common/White */
   color: #ffffff;
-
-  /* Inside auto layout */
   flex: none;
   order: 1;
   flex-grow: 0;
 }
 .hero-text2 .t2 {
-  /* Shameera Carrim. */
-
   width: 675px;
   height: 109px;
-
   font-family: "Manrope";
   font-style: normal;
   font-weight: 300;
   font-size: 80px;
   line-height: 109px;
-
-  /* Common/White */
   color: #ffffff;
-
-  /* Inside auto layout */
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -526,6 +510,7 @@ Hero
 }
 .hero-img {
   display: none;
+  background-size: cover;
   /* height: 710px; */
 }
 .hero-info h4 {
@@ -561,16 +546,18 @@ Hero
 }
 @media screen and (min-width: 992px) {
   .hero::before {
-    content: "";
+    margin-top: 0;
+
+    /* content: "";
     position: absolute;
     top: 0;
     left: 65%;
     right: 0;
     bottom: 0;
-    background: var(--clr-white);
+    background: var(--clr-white); */
   }
   .hero-center {
-    grid-template-columns: repeat(12, 1fr);
+    /* grid-template-columns: repeat(12, 1fr); */
   }
 
   .hero h4 {
@@ -608,58 +595,99 @@ Hero
     line-height: 1;
   }
 }
-
 /*
-=============== 
-Services
-===============
+About
 */
-.service {
-  background: var(--clr-white);
-  padding: 3rem 1.5rem;
-  margin-bottom: 2rem;
-  border-radius: var(--radius);
-  text-align: center;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+
+.about-center {
+  display: flex;
+  top: 100%;
+  position: absolute;
+  padding: 30px;
+  width: 100%;
+  justify-content: space-around;
+  column-gap: 20px;
 }
-.service-icon {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-.service .underline {
-  width: 3rem;
-  height: 0.12rem;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-}
-.service p {
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-}
-.service:hover {
-  background: var(--clr-primary-5);
-  color: var(--clr-primary-9);
-}
-.service:hover p {
-  color: var(--clr-primary-9);
-}
-.service:hover .underline {
-  background: var(--clr-primary-9);
-}
-@media screen and (min-width: 676px) {
-  .services-center {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    -webkit-column-gap: 2rem;
-    -moz-column-gap: 2rem;
-    column-gap: 2rem;
+@media screen and (max-width: 700px) {
+  .about-center {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 992px) {
-  .services-center {
-    grid-template-columns: 1fr 1fr 1fr;
+  .about-center {
+    flex-direction: row;
+    justify-content: space-around;
+    column-gap: 20px;
   }
+}
+.about-text1 .t1 {
+  /* About Me */
+
+  width: 225px;
+  height: 71px;
+
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 71px;
+  /* identical to box height */
+  letter-spacing: -0.04em;
+
+  /* Palette 2/Medium Purple */
+  color: #9381ff;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.about-text1 .t2 {
+  /* About Me */
+
+  width: 225px;
+  height: 71px;
+
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 52px;
+  line-height: 71px;
+  /* identical to box height */
+  letter-spacing: -0.04em;
+
+  /* Palette 2/Medium Purple */
+  color: #9381ff;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.about-underline {
+  width: 150px;
+  height: 12px;
+  background: #ffd8be;
+  border-radius: 20px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.about-text2 {
+  word-wrap: break-word;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 175%;
+  text-align: justify;
+  letter-spacing: -0.02em;
+  color: #1e1e1e;
+  opacity: 0.6;
+  width: 100%;
 }
 
 /*
@@ -1054,19 +1082,19 @@ About Page
   font-size: 1rem;
 }
 @media screen and (min-width: 992px) {
-  .about-center {
+  /* .about-center {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
     column-gap: 4rem;
-  }
-  .about-img {
+  } */
+  /* .about-img {
     grid-column: 1 / span 5;
     margin-bottom: 0;
   }
   .about-text {
     grid-column: 6 / -1;
-  }
+  } */
 }
 /*
 ===============
