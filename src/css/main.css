@@ -310,7 +310,7 @@ Navbar
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1000px) {
   .navbar {
     background: transparent;
   }
@@ -537,14 +537,14 @@ Hero
   letter-spacing: 0em;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1000px) {
   .hero-text3,
   .hero-text2 > .t1,
   .hero-text2 > .t2 {
     color: black;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1000px) {
   .hero::before {
     margin-top: 0;
 

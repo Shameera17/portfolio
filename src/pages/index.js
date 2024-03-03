@@ -12,6 +12,7 @@ export default () => {
     <Layout>
       <Hero />
       <About />
+      {/* <Jobs /> */}
     </Layout>
   )
 }
