@@ -1,5 +1,6 @@
 import React from "react"
 import Image from "gatsby-image"
+import "../css/hero.css"
 import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"

@@ -1,0 +1,152 @@
+/*
+=============== 
+Hero
+===============
+*/
+
+.hero {
+  margin-top: -5rem;
+  background-color: #9381ff;
+  padding-bottom: 20px;
+}
+
+.hero-text1 {
+  font-family: Manrope;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--beige);
+}
+.hero-text2 .t1 {
+  width: 675px;
+  height: 109px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 109px;
+  color: #ffffff;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.hero-text2 .t2 {
+  width: 675px;
+  height: 109px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 80px;
+  line-height: 109px;
+  color: #ffffff;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.hero-text3 {
+  max-width: 685px;
+  /* height: 74px; */
+
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 175%;
+  /* or 37px */
+  letter-spacing: 0.05em;
+
+  /* Common/White */
+  color: #ffffff;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.hero-info {
+  padding-top: 100px;
+  /* position: relative; */
+  display: flex;
+  column-gap: 86px;
+  margin-left: 61px;
+}
+.hero-img {
+  display: none;
+  background-size: cover;
+}
+.hero-info h4 {
+  color: var(--clr-grey-5);
+}
+.hero-icons {
+  justify-items: flex-start;
+  align-items: center;
+}
+
+.hero .btn {
+  margin-top: 1.25rem;
+  width: 222px;
+  height: 56px;
+  text-transform: none;
+  color: black;
+  border-radius: 10px;
+  background-color: var(--beige);
+  text-align: center;
+  vertical-align: middle;
+  font-family: Manrope;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0em;
+}
+
+/* @media screen and (max-width: 992px) {
+  .hero-text3,
+  .hero-text2 > .t1,
+  .hero-text2 > .t2 {
+    color: black;
+  }
+} */
+
+@media screen and (min-width: 992px) {
+  .hero::before {
+    margin-top: 0;
+  }
+
+  .hero h4 {
+    font-size: 0.85rem;
+  }
+  .hero-info {
+    grid-row: 1/1;
+    grid-column: 1 / span 8;
+  }
+
+  .code-icon {
+    width: 377px;
+    height: 335px;
+
+    opacity: 0.1px;
+  }
+
+  .hero-img {
+    display: none;
+    /* background-color: aquamarine; */
+    /* display: block;
+    grid-row: 1/1;
+    grid-column: 6/-1; */
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .hero h4 {
+    font-size: 1rem;
+  }
+
+  .hero-info {
+    grid-column: 1 / span 8;
+  }
+
+  .hero h4 {
+    line-height: 1;
+  }
+}
