@@ -20,7 +20,7 @@ const About = () => {
     },
   } = useStaticQuery(query)
   return (
-    <header className="about-center">
+    <header className="about-center" id="about">
       <Image
         className={"about-image"}
         fluid={fluid}

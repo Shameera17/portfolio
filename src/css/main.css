@@ -439,6 +439,7 @@ About
 */
 
 .about-center {
+  min-height: 100vh;
   display: flex;
   top: 100%;
   /* position: absolute; */
@@ -446,6 +447,7 @@ About
   width: 100%;
   justify-content: space-around;
   column-gap: 20px;
+  align-items: center;
 }
 @media screen and (max-width: 700px) {
   .about-center {
@@ -534,11 +536,14 @@ About
 Jobs
 ===============
 */
-
+.section.jobs {
+  padding: 100px 138px;
+}
 .jobs-center {
-  width: 80vw;
+  width: 100vw;
   margin: 0 auto;
   max-width: var(--max-width);
+  /* background-color: white; */
 }
 .btn-container {
   display: flex;
@@ -567,6 +572,9 @@ Jobs
   box-shadow: 0 2px var(--clr-primary-5);
 }
 .job-info {
+  background-color: white;
+  border-radius: 20px;
+  padding: 35px;
   /* min-height: 420px; */
 }
 .job-info h3 {
@@ -617,6 +625,60 @@ Jobs
   .job-btn:hover {
     box-shadow: -2px 0 var(--clr-primary-5);
   }
+}
+
+.job-text1 .t1 {
+  /* About Me */
+
+  width: 225px;
+  height: 71px;
+
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 71px;
+  /* identical to box height */
+  letter-spacing: -0.04em;
+
+  /* Palette 2/Medium Purple */
+  color: #1e1e1e;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.job-text1 .t2 {
+  /* About Me */
+
+  /* width: 225px; */
+  height: 71px;
+
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 52px;
+  line-height: 71px;
+  /* identical to box height */
+  letter-spacing: -0.04em;
+
+  /* Palette 2/Medium Purple */
+  color: #1e1e1e;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.job-underline {
+  width: 194px;
+  height: 12px;
+  background: #ffd8be;
+  border-radius: 20px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
 
 /*

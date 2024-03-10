@@ -3,7 +3,7 @@ export default [
   {
     id: 1,
     // icon: <FaCode className="service-icon" />,
-    company: "CabbageApps (pvt) ltd",
+    company: "CabbageApps",
     positionBased: [
       {
         title: "Intern Software Engineer",
@@ -69,7 +69,7 @@ export default [
   {
     id: 2,
     // icon: <FaCode className="service-icon" />,
-    company: "Innovative-e (pvt) ltd",
+    company: "Innovative-e",
     positionBased: [
       {
         title: "Associate Software Engineer",

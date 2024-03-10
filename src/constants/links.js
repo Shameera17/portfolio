@@ -1,37 +1,45 @@
 import React from "react"
 import { Link } from "gatsby"
+import { scrollToElement } from "../utils/helpers"
 const data = [
   {
     id: 1,
-    text: "home",
-    url: "/",
+    text: "about",
+    nav: "about",
   },
   {
     id: 2,
-    text: "about",
-    url: "/about/",
+    text: "experience",
+    nav: "jobs",
   },
   {
     id: 3,
     text: "projects",
-    url: "/projects/",
+    nav: "projects",
   },
   {
     id: 4,
     text: "hobbies",
-    url: "/hobbies/",
+    nav: "hobbies",
   },
   {
     id: 5,
     text: "contact",
-    url: "/contact/",
+    nav: "contact",
   },
 ]
 
 const tempLinks = data.map(link => {
   return (
     <li key={link.id} className={link.text + link.id}>
-      <Link to={link.url}>{link.text}</Link>
+      <a
+        style={{
+          cursor: "pointer",
+        }}
+        onClick={() => scrollToElement(link.nav)}
+      >
+        {link.text}
+      </a>
     </li>
   )
 })

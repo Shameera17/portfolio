@@ -8,8 +8,27 @@ const Jobs = () => {
   const [value, setValue] = useState(1)
   const { company, positionBased, id } = jobs[value]
   return (
-    <section className="section jobs">
-      <Title title="experience" />
+    <section
+      style={{
+        backgroundColor: "#FFD8BE33",
+      }}
+      className="section jobs"
+      id="jobs"
+    >
+      <div
+        className="job-text1"
+        style={{
+          display: "flex",
+          gap: "10px",
+          marginBottom: "50px",
+        }}
+      >
+        <span className="t2">My</span>
+        <div>
+          <span className="t1">Journey</span>
+          <p className="job-underline"></p>
+        </div>
+      </div>
       <div className="jobs-center">
         {/* btn container */}
         <div className="btn-container">
