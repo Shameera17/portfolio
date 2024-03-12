@@ -49,7 +49,6 @@ const Jobs = () => {
           {positionBased.map((item, index) => (
             <div key={index}>
               <h3>{item.title}</h3>
-              <h4>{company}</h4>
               <p className="job-date">{item.duration}</p>
               {/* projects */}
               {item.project.map((projectItem, index) => (
